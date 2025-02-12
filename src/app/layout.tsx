@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "../../src/globals.scss";
+import type { Metadata } from 'next';
+import '../../src/styles/globals.scss';
 
 export const metadata: Metadata = {
-  title: "NextJs Demo",
-  description: "Demo project for RTG Mentorship program",
+  title: 'NextJs Demo',
+  description: 'Demo project for RTG Mentorship program',
 };
 
 const RootLayout = ({
