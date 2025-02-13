@@ -1,7 +1,7 @@
 'use client';
 
 // todo - fix the hover issue for form elements
-// todo - add unit tests
+// todo - add unit tests for the form and the form components
 
 import { FC, useEffect, useState } from 'react';
 import { TextInput } from '../TextInput/TextInput';
@@ -23,6 +23,7 @@ export const FoodForm: FC = () => {
   const submitForm = () => {
     setTextInputValue('');
     setNumberInputValue(undefined);
+    // todo - update for redux
   };
 
   const clearForm = () => {

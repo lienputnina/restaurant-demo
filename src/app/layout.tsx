@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { StoreProvider } from './StoreProvider';
+
 import '../../src/styles/globals.scss';
 
 export const metadata: Metadata = {
@@ -13,7 +15,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <StoreProvider>
+        <body>{children}</body>
+      </StoreProvider>
     </html>
   );
 };
