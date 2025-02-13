@@ -7,6 +7,7 @@ import { FC, useEffect, useState } from 'react';
 import { TextInput } from '../TextInput/TextInput';
 import { NumberInput } from '../NumberInput/NumberInput';
 import { Button, ButtonVariant } from '../Button/Button';
+import { Title, TitleLevel } from '../Title/Title';
 
 export const FoodForm: FC = () => {
   const [textInputValue, setTextInputValue] = useState<string>('');
@@ -31,11 +32,16 @@ export const FoodForm: FC = () => {
 
   return (
     <div id="form">
-      <h2>Enter your data:</h2>
+      <Title
+        level={TitleLevel.TWO}
+        style={{ fontSize: '35px', lineHeight: '40px', margin: '5' }}
+      >
+        Please, enter data about your country's most popular dish
+      </Title>
       <form>
         <TextInput
           id="fav-food-name"
-          label="What's your favorite food?"
+          label="What's the most popular national dish in your country?"
           value={textInputValue}
           onChange={(newValue) => {
             setTextInputValue(newValue);
