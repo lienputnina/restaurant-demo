@@ -1,0 +1,37 @@
+@use '../../styles/typography.scss';
+@use '../../styles/paddings.scss';
+@use '../../styles/margins.scss';
+@use '../../styles/colors.scss';
+@use '../../styles/elevations.scss';
+@use '../../styles/mixins.scss';
+
+.button {
+  border: 0.1875rem solid colors.$accent;
+  padding: paddings.$xs paddings.$sm;
+  margin: margins.$sm margins.$sm margins.$sm 0;
+  @include elevations.level-1();
+
+  @include typography.text-regular();
+  @include mixins.rounded-border();
+  @include mixins.focus-visible-outline();
+
+  &.primary {
+    background-color: colors.$accent;
+    color: colors.$tile-text;
+    &:hover {
+      border-color: colors.$accent--hover;
+      background-color: colors.$accent--hover;
+      @include elevations.level-2();
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    color: colors.$accent;
+    &:hover {
+      border-color: colors.$accent--hover;
+      color: colors.$accent--hover;
+      @include elevations.level-2();
+    }
+  }
+}

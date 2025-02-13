@@ -1,8 +1,6 @@
 import { HTMLProps } from 'react';
 import './NumberInput.scss';
 
-// todo  - check about refs
-
 export interface NumberInputProps
   extends Omit<HTMLProps<HTMLInputElement>, 'onChange'> {
   id: string;
@@ -33,11 +31,13 @@ export const NumberInput = ({
       id={`${id}-input`}
       type="number"
       name={name}
-      value={value}
+      value={value !== undefined ? value : ''}
       min={min}
       max={max}
       aria-labelledby={`${id}-label`}
-      onChange={(event) => onChange(parseInt(event.target.value, 10))}
+      onChange={(event) =>
+        onChange(event.target.value === '' ? 0 : Number(event.target.value))
+      }
     />
   </div>
 );
