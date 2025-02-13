@@ -24,6 +24,11 @@ export const FoodForm: FC = () => {
     setNumberInputValue(undefined);
   };
 
+  const clearForm = () => {
+    setTextInputValue('');
+    setNumberInputValue(undefined);
+  };
+
   return (
     <div id="form">
       <h2>Enter your data:</h2>
@@ -49,10 +54,7 @@ export const FoodForm: FC = () => {
           <Button variant={ButtonVariant.PRIMARY} onClick={() => submitForm()}>
             Submit
           </Button>
-          <Button
-            variant={ButtonVariant.SECONDARY}
-            // onClick={() => clearForm()}
-          >
+          <Button variant={ButtonVariant.SECONDARY} onClick={() => clearForm()}>
             Clear
           </Button>
         </div>
