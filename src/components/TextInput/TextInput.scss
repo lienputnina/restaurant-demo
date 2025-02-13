@@ -1,0 +1,21 @@
+@use '../../styles/typography.scss';
+@use '../../styles/paddings.scss';
+@use '../../styles/margins.scss';
+@use '../../styles/colors.scss';
+@use '../../styles/elevations.scss';
+@use '../../styles/mixins.scss';
+@use '../../styles/variables.module.scss';
+
+.text-input {
+  color: colors.$text;
+
+  @include mixins.input-wrapper();
+  @include mixins.input-with-shadows();
+  @include typography.text-regular();
+
+  label {
+    margin-bottom: margins.$xs;
+  }
+}
+
+// todo - fix the hover issue for input

@@ -1,7 +1,9 @@
 import { NextPage } from 'next';
 import './page.scss';
-import { TextInput } from '@/components/TextInput/TextInput';
 import { FoodForm } from '@/components/Form/FoodForm';
+
+// todo - create "results" page to show after submitting the form
+// todo - create a header/menu
 
 const Home: NextPage = () => {
   return (
