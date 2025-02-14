@@ -1,7 +1,7 @@
 'use client';
 
 import { Title, TitleAlignment, TitleLevel } from '@/components/Title/Title';
-import { RootState } from '@/lib/store';
+import { RootState } from '@/redux/store';
 import { NextPage } from 'next';
 import { useSelector } from 'react-redux';
 import './resultsPage.scss';

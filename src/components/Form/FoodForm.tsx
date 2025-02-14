@@ -16,9 +16,9 @@ import {
   setNumberInputValue,
   submitForm,
   clearForm,
-} from '@/lib/features/FormState/FormSlice';
+} from '@/redux/features/FormState/FormSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/lib/store';
+import { RootState } from '@/redux/store';
 
 import Link from 'next/link';
 
