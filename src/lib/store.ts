@@ -1,11 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit';
+import formReducer from './features/FormState/FormSlice';
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+      form: formReducer,
+    },
   });
 };
 
+export type RootState = {
+  form: {
+    textInputValue: string;
+    numberInputValue: number | undefined;
+  };
+};
 export type AppStore = ReturnType<typeof makeStore>;
-export type RootState = ReturnType<AppStore['getState']>;
 export type AppDispatch = AppStore['dispatch'];

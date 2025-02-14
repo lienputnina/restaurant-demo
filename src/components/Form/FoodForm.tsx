@@ -2,34 +2,32 @@
 
 // todo - fix the hover issue for form elements
 // todo - add unit tests for the form and the form components
+// todo - create the results page
 
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
+
 import { TextInput } from '../TextInput/TextInput';
 import { NumberInput } from '../NumberInput/NumberInput';
 import { Button, ButtonVariant } from '../Button/Button';
 import { Title, TitleLevel } from '../Title/Title';
 
+import {
+  setTextInputValue,
+  setNumberInputValue,
+  submitForm,
+  clearForm,
+} from '@/lib/features/FormState/FormSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/lib/store';
+
 export const FoodForm: FC = () => {
-  const [textInputValue, setTextInputValue] = useState<string>('');
-  const [numberInputValue, setNumberInputValue] = useState<number | undefined>(
-    undefined,
+  const dispatch = useDispatch();
+  const textInputValue = useSelector(
+    (state: RootState) => state.form.textInputValue,
   );
-
-  useEffect(() => {
-    setTextInputValue(textInputValue);
-    setNumberInputValue(numberInputValue);
-  }, [textInputValue, numberInputValue]);
-
-  const submitForm = () => {
-    setTextInputValue('');
-    setNumberInputValue(undefined);
-    // todo - update for redux
-  };
-
-  const clearForm = () => {
-    setTextInputValue('');
-    setNumberInputValue(undefined);
-  };
+  const numberInputValue = useSelector(
+    (state: RootState) => state.form.numberInputValue,
+  );
 
   return (
     <div id="form">
@@ -45,7 +43,7 @@ export const FoodForm: FC = () => {
           label="What's the most popular national dish in your country?"
           value={textInputValue}
           onChange={(newValue) => {
-            setTextInputValue(newValue);
+            dispatch(setTextInputValue(newValue));
           }}
         />
         <NumberInput
@@ -54,14 +52,20 @@ export const FoodForm: FC = () => {
           name="amount of making the dish"
           value={numberInputValue}
           onChange={(newValue) => {
-            setNumberInputValue(newValue);
+            dispatch(setNumberInputValue(newValue));
           }}
         />
         <div id="form-buttons">
-          <Button variant={ButtonVariant.PRIMARY} onClick={() => submitForm()}>
+          <Button
+            variant={ButtonVariant.PRIMARY}
+            onClick={() => dispatch(submitForm())}
+          >
             Submit
           </Button>
-          <Button variant={ButtonVariant.SECONDARY} onClick={() => clearForm()}>
+          <Button
+            variant={ButtonVariant.SECONDARY}
+            onClick={() => dispatch(clearForm())}
+          >
             Clear
           </Button>
         </div>
