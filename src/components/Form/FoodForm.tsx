@@ -20,6 +20,8 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/lib/store';
 
+import Link from 'next/link';
+
 export const FoodForm: FC = () => {
   const dispatch = useDispatch();
   const textInputValue = useSelector(
@@ -56,12 +58,14 @@ export const FoodForm: FC = () => {
           }}
         />
         <div id="form-buttons">
-          <Button
-            variant={ButtonVariant.PRIMARY}
-            onClick={() => dispatch(submitForm())}
-          >
-            Submit
-          </Button>
+          <Link href="/resultsPage">
+            <Button
+              variant={ButtonVariant.PRIMARY}
+              onClick={() => dispatch(submitForm())}
+            >
+              Submit
+            </Button>
+          </Link>
           <Button
             variant={ButtonVariant.SECONDARY}
             onClick={() => dispatch(clearForm())}
