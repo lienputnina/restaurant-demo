@@ -4,7 +4,7 @@ import { StoreProvider } from './StoreProvider';
 import '../../src/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'NextJs Demo',
+  title: 'Restaurant Demo',
   description: 'Demo project for RTG Mentorship program',
 };
 
