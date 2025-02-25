@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { StoreProvider } from './StoreProvider';
 
-import '../../src/styles/globals.scss';
+import '../../src/styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'NextJs Demo',
