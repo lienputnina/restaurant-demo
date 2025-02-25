@@ -2,7 +2,6 @@
 
 // todo - fix the hover issue for form elements
 // todo - add unit tests for the form and the form components
-// todo - create the results page
 
 import { FC } from 'react';
 
