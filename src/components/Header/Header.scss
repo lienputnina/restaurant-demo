@@ -1,0 +1,30 @@
+@use '../../styles/colors.scss';
+@use '../../styles/paddings.scss';
+@use '../../styles/elevations.scss';
+@use '../../styles/variables.module.scss';
+
+$logo-size: 2.5rem;
+
+.restaurant-header {
+  display: flex;
+  // position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: variables.$header-height;
+  padding: paddings.$xl;
+  background-color: colors.$board-background;
+
+  @include elevations.level-1();
+}
+
+#header-logo {
+  // position: absolute;
+  left: paddings.$xl;
+  width: $logo-size;
+  overflow: hidden;
+
+  &:hover {
+    @include elevations.level-1();
+  }
+}
