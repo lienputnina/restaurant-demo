@@ -14,8 +14,6 @@
   @include typography.text-regular();
 
   label {
-    margin-bottom: margins.$xs;
+    margin-bottom: margins.$sm;
   }
 }
-
-// todo - fix the hover issue for input
