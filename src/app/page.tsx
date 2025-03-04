@@ -5,6 +5,7 @@ import './page.scss';
 import { Header } from 'src/components/Header/Header';
 import { Hero } from 'src/components/Hero/Hero';
 import { TextInput } from 'src/components/TextInput/TextInput';
+import { Footer } from 'src/components/Footer/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
           />
         </div>
       </main>
+      <Footer />
     </>
   );
 };
