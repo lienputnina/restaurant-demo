@@ -1,14 +1,15 @@
 import { NextPage } from 'next';
 import './page.scss';
 import { Header } from 'src/components/Header/Header';
+import { Hero } from 'src/components/Hero/Hero';
 
 const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <main className="m-8 flex flex-col ">
+      <main className="flex flex-col justify-center ">
         <div className="children">
-          <p>Hero image</p>
+          <Hero />
           <p>Search bar</p>
           <p>Other child</p>
         </div>
