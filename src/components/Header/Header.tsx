@@ -1,14 +1,15 @@
 import { FC, HTMLProps, ReactNode } from 'react';
 import './Header.scss';
+import Link from 'next/link';
 
 export const Header: FC = () => (
   <header className="restaurant-header">
     <div id="header-logo">
-      <a href="/">
+      <Link href="/">
         <img src="falafel_clipart.jpg" alt="taste of latvia logo" />
-      </a>
+      </Link>
     </div>
-    <ul className="flex justify-end w-full gap-3">
+    <ul className="flex justify-end w-fit gap-3 shrink-0">
       <li className="menu-item">
         <a href="">Menu</a>
       </li>

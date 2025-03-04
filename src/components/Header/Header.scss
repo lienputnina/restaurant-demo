@@ -7,20 +7,18 @@ $logo-size: 2.5rem;
 
 .restaurant-header {
   display: flex;
-  // position: relative;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: variables.$header-height;
-  padding: paddings.$xl;
+  padding: paddings.$xl 20px paddings.$xl 20px;
   background-color: colors.$board-background;
 
   @include elevations.level-1();
 }
 
 #header-logo {
-  // position: absolute;
-  left: paddings.$xl;
+  flex-shrink: 0;
   width: $logo-size;
   overflow: hidden;
 
