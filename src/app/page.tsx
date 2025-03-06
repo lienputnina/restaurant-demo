@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <Header />
       <main id="main w-full">
         <Hero />
-        <div className="flex flex-col items-center p-6">
+        <div className="flex flex-col justify-start p-6">
           <TextInput
             id="food-search"
             label="Browse the foods in our menu:"
