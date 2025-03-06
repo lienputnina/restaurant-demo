@@ -1,0 +1,19 @@
+@use '../styles/paddings.scss';
+@use '../styles/mixins.scss';
+@use '../styles/colors.scss';
+@use '../styles/variables.module.scss';
+
+main#main {
+  height: calc(100vh - #{variables.$header-height});
+  padding: paddings.$lg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mixins.focus-visible-outline();
+  a {
+    color: colors.$accent;
+  }
+  a:hover {
+    color: colors.$accent--hover;
+  }
+}

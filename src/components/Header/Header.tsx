@@ -3,7 +3,7 @@ import './Header.scss';
 import Link from 'next/link';
 
 export const Header: FC = () => (
-  <header className="restaurant-header">
+  <header className="restaurant-header" tabIndex={0}>
     <div id="header-logo">
       <Link href="/">
         <img src="falafel_clipart.jpg" alt="taste of latvia logo" />

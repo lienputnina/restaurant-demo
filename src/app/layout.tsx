@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { StoreProvider } from './StoreProvider';
 
-import '../../src/styles/globals.css';
+import '../styles/globals.css';
+import '../styles/customStyles.scss';
+
+// todo - fix the outline issue
 
 export const metadata: Metadata = {
   title: 'Restaurant Demo',

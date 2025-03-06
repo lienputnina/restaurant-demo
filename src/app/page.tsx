@@ -1,17 +1,17 @@
 'use client';
 
 import { NextPage } from 'next';
-import './page.scss';
 import { Header } from 'src/components/Header/Header';
 import { Hero } from 'src/components/Hero/Hero';
 import { TextInput } from 'src/components/TextInput/TextInput';
 import { Footer } from 'src/components/Footer/Footer';
+import './page.scss';
 
 const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <main className="w-full ">
+      <main id="main w-full">
         <Hero />
         <div className="flex flex-col items-center p-6">
           <TextInput

@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+@layer base {
+  :focus-visible {
+    outline: none;
+  }
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
