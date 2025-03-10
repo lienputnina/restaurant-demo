@@ -3,9 +3,12 @@
 import { NextPage } from 'next';
 import { Header } from 'src/components/Header/Header';
 import { Hero } from 'src/components/Hero/Hero';
-import { TextInput } from 'src/components/TextInput/TextInput';
 import { Footer } from 'src/components/Footer/Footer';
+import { Search } from 'src/components/Search/Search';
+
 import './page.scss';
+
+// todo - create the main call to json file. Install json server, if necessary.
 
 const Home: NextPage = () => {
   return (
@@ -14,14 +17,7 @@ const Home: NextPage = () => {
       <main id="main w-full">
         <Hero />
         <div className="flex flex-col justify-start p-6">
-          <TextInput
-            id="food-search"
-            label="Browse the foods in our menu:"
-            value=""
-            onChange={(newValue: string) => {
-              console.log(newValue);
-            }}
-          />
+          <Search />
         </div>
       </main>
       <Footer />
