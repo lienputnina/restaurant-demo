@@ -14,9 +14,9 @@ add button to clear the search input?
 import { FC } from 'react';
 import { TextInput } from '../TextInput/TextInput';
 
-import { setTextInputValue } from '../../redux/SearchSlice';
+import { setTextInputValue } from '../../state/slices/SearchSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import { RootState } from '../../state/store';
 
 export const Search: FC = () => {
   // search logic and redux
