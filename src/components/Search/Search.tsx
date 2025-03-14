@@ -37,11 +37,11 @@ export const Search: FC = () => {
       />
       {/* <Meals dishes={filteredDishes} /> */}
       <div className="meals">
-        <p>Name:</p>
+        {/* <p>Name:</p>
         <p>Description:</p>
         <p>Price:</p>
         <p>Category</p>
-        <p>Image:</p>
+        <p>Image:</p> */}
       </div>
     </div>
   );
