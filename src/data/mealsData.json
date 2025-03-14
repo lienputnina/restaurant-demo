@@ -5,7 +5,7 @@
     "description": "Beetroot soup with a vegan kefir.",
     "price": 10,
     "category": "appetizers",
-    "img": "falafel_clipart.jpg"
+    "img": "cold_soup.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Beetroot soup with a vegan sausage.",
     "price": 10,
     "category": "appetizers",
-    "img": "falafel_clipart.jpg"
+    "img": "beetroot_soup.jpg"
   },
   {
     "id": 3,
@@ -21,15 +21,15 @@
     "description": "Salad with boiled potatoes, vegan sausage, green peas, carrots and vegan mayonnaise. Spices: salt, pepper, mustard powder.",
     "price": 10,
     "category": "appetizers",
-    "img": "falafel_clipart.jpg"
+    "img": "rasols.jpg"
   },
   {
     "id": 4,
     "name": "Mock Bacon Pies",
-    "description": "Small pies with backed chickpeas or tofu and fried onions. Spices: soy sauce, cumin.",
+    "description": "Small pies with backed chickpeas or mushrooms and fried onions. Spices: soy sauce, cumin.",
     "price": 8,
     "category": "appetizers",
-    "img": "falafel_clipart.jpg"
+    "img": "mock_pies.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Fried toast covered in garlic.",
     "price": 8,
     "category": "appetizers",
-    "img": "falafel_clipart.jpg"
+    "img": "garlic_toast.jpg"
   },
   {
     "id": 6,
@@ -45,15 +45,15 @@
     "description": "Pie with potato and carrot filling. Topped with a layer of vegan cream, cinnamon, or caraway seeds.",
     "price": 10,
     "category": "main courses",
-    "img": "falafel_clipart.jpg"
+    "img": "sklandrausis.jpg"
   },
   {
     "id": 7,
-    "name": "Grey Peas",
+    "name": "Grey Peas with Smekis",
     "description": "Boiled grey peas with smekis - coconut milk with baked tofu, roasted sunflower seeds and fried onions. Spices: soy sauce, smoked paprika.",
     "price": 8,
     "category": "main courses",
-    "img": "falafel_clipart.jpg"
+    "img": "grey_peas_smekis.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Sauerkraut with Beyond meat sausage, boiled potatoes and green peas.",
     "price": 8,
     "category": "main courses",
-    "img": "falafel_clipart.jpg"
+    "img": "sauerkraut.jpeg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "Made from barley groats, oat milk, and potatoes. Served with roast tofu, onions and lingonberry sauce.",
     "price": 8,
     "category": "main courses",
-    "img": "falafel_clipart.jpg"
+    "img": "bukstinputra.jpg"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "description": "Mock  pickled herring salad with tofu, beets, carrots, nori sheets, vegan mayonnaise etc.",
     "price": 15,
     "category": "main courses",
-    "img": "falafel_clipart.jpg"
+    "img": "herring_in_coat.jpg"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "description": "Grated potatoes fried with mock egg and spices.",
     "price": 10,
     "category": "main courses",
-    "img": "falafel_clipart.jpg"
+    "img": "potato_pancakes.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "description": "Boiled potatoes with chanterelle sauce from oat cream.",
     "price": 8,
     "category": "main courses",
-    "img": "falafel_clipart.jpg"
+    "img": "potatoes_chanterelle_sauce.jpg"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "description": "Made from whipped sugar and fruit or berry pulp. Manna mousse is includes whipped cream.",
     "price": 8,
     "category": "desserts",
-    "img": "falafel_clipart.jpg"
+    "img": "debesmanna.jpg"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "description": "Traditional Latvian dessert made from rye breadcrumbs, blackcurrant jam and whipped cream. Topped with grated dark chocolate.",
     "price": 10,
     "category": "desserts",
-    "img": "falafel_clipart.jpg"
+    "img": "rye_bread_layer.jpg"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "description": "Dessert made from cookies, vegan condensed milk, margarine, hazel nuts and poppy seeds.",
     "price": 10,
     "category": "desserts",
-    "img": "falafel_clipart.jpg"
+    "img": "ant_hill.jpg"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "description": "Chocolatey mini cake made with cocoa, margarine, nuts and fancy flour.",
     "price": 10,
     "category": "desserts",
-    "img": "falafel_clipart.jpg"
+    "img": "sweet_potato.jpg"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "description": "Fermented tea with lemon-ginger, jasmine and other flavours.",
     "price": 6,
     "category": ["drinks"],
-    "img": "falafel_clipart.jpg"
+    "img": "kombucha_2.jpg"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "description": "Fermented, cereal-based, low-alcoholic or non-alcoholic drink with malt.",
     "price": 6,
     "category": ["drinks"],
-    "img": "falafel_clipart.jpg"
+    "img": "kvass.jpg"
   },
   {
     "id": 19,
@@ -149,15 +149,15 @@
     "description": "Juice extracted from the birch tree.",
     "price": 4,
     "category": ["drinks"],
-    "img": "falafel_clipart.jpg"
+    "img": "birch_juice.jpg"
   },
   {
     "id": 20,
-    "name": "Still water",
-    "description": "Still water.",
+    "name": "Still water lemonade",
+    "description": "Still water with lemon.",
     "price": 3,
     "category": ["drinks"],
-    "img": "falafel_clipart.jpg"
+    "img": "still_water_lemon.jpg"
   },
   {
     "id": 21,
@@ -165,6 +165,6 @@
     "description": "Sparkling water.",
     "price": 3,
     "category": ["drinks"],
-    "img": "falafel_clipart.jpg"
+    "img": "sparkling_water.jpg"
   }
 ]
