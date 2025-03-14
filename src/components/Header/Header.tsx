@@ -5,8 +5,8 @@ import Link from 'next/link';
 export const Header: FC = () => (
   <header className="restaurant-header" tabIndex={0}>
     <div id="header-logo">
-      <Link href="/">
-        <img src="falafel_clipart.jpg" alt="taste of latvia logo" />
+      <Link href="potato_pancakes.jpg">
+        <img src="potato_pancakes.jpg" alt="taste of latvia logo" />
       </Link>
     </div>
     <ul className="flex justify-end w-fit gap-3 shrink-0">
