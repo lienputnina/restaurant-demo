@@ -14,7 +14,7 @@ add button to clear the search input?
 import { FC } from 'react';
 import { TextInput } from '../TextInput/TextInput';
 
-import { setTextInputValue } from '../../state/slices/SearchSlice';
+import { setTextInputValue } from '../../state/slices/SearchInputSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
 
@@ -22,7 +22,7 @@ export const Search: FC = () => {
   // search logic and redux
   const dispatch = useDispatch();
   const textInputValue = useSelector(
-    (state: RootState) => state.search.textInputValue,
+    (state: RootState) => state.searchInput.textInputValue,
   );
 
   return (
@@ -36,6 +36,13 @@ export const Search: FC = () => {
         }}
       />
       {/* <Meals dishes={filteredDishes} /> */}
+      <div className="meals">
+        <p>Name:</p>
+        <p>Description:</p>
+        <p>Price:</p>
+        <p>Category</p>
+        <p>Image:</p>
+      </div>
     </div>
   );
 };

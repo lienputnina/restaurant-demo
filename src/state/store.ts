@@ -1,18 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
-import searchReducer from './SearchSlice';
+import searchInputReducer from '../state/slices/SearchInputSlice';
 
 import { TextInputProps } from '../components/TextInput/TextInput';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      search: searchReducer,
+      searchInput: searchInputReducer,
     },
   });
 };
 
 export type RootState = {
-  search: {
+  searchInput: {
     textInputValue: TextInputProps['value'];
   };
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import { TextInputProps } from '../components/TextInput/TextInput';
+import { TextInputProps } from '../../components/TextInput/TextInput';
 
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
@@ -13,8 +13,7 @@ const initialState: SearchState = {
   textInputValue: '',
 };
 
-// reducers are actions that need to be taken on the state.
-export const searchSlice = createSlice({
+export const searchInputSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
@@ -27,6 +26,6 @@ export const searchSlice = createSlice({
   },
 });
 
-export const { setTextInputValue } = searchSlice.actions;
+export const { setTextInputValue } = searchInputSlice.actions;
 
-export default searchSlice.reducer;
+export default searchInputSlice.reducer;
