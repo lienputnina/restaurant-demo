@@ -24,10 +24,10 @@ export const mealsSlice = createSlice({
   name: 'meals',
   initialState,
   reducers: {
-    setMeals: (state, action) => {
+    setMeals: (state, action: PayloadAction<MealData[]>) => {
       state.meals = action.payload;
     },
-    setMeal: (state, action) => {
+    setMeal: (state, action: PayloadAction<MealData>) => {
       const meals = state.meals.filter((meal) => meal.id !== action.payload.id);
       meals.push(action.payload);
       state.meals = meals;

@@ -9,21 +9,21 @@ import { Search } from 'src/components/Search/Search';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from 'src/state/hooks';
 import { useEffect } from 'react';
-import { setMeals } from 'src/state/slices/MealsSlice';
+import { MealData, setMeals } from 'src/state/slices/MealsSlice';
 import { RootState } from 'src/state/store';
-import mealsData from '../data/mealsData.json';
-
 import './page.scss';
 
 const Home: NextPage = () => {
+  const mealData: MealData[] = require('../data/mealData.json');
+
   const dispatch = useDispatch();
   const meals = useAppSelector((state: RootState) => state.meals);
 
   useEffect(() => {
     if (!meals.meals.length) {
-      dispatch(setMeals(mealsData));
+      dispatch(setMeals(mealData));
     }
-  }, [dispatch]);
+  }, [dispatch, meals]);
 
   return (
     <>
