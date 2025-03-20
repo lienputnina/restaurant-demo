@@ -42,7 +42,7 @@ export const Search: FC = () => {
         }}
       />
       <div className="meal-results">
-        {mealData.meals.map((meal) => (
+        {mealData.meals.map((meal: MealData) => (
           <ul
             key={meal.id}
             className="border-solid border-2 border-black rounded p-4 mb-4"
