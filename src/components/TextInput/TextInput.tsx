@@ -6,7 +6,7 @@ export interface TextInputProps
   id: string;
   name?: string;
   label: string;
-  value?: string;
+  value: string;
   onChange: (newValue: string) => void;
 }
 
