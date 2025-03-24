@@ -132,7 +132,7 @@
     "name": "Kombucha",
     "description": "Fermented tea with lemon-ginger, jasmine and other flavours.",
     "price": 6,
-    "category": ["drinks"],
+    "category": "drinks",
     "img": "kombucha_2.jpg"
   },
   {
@@ -140,7 +140,7 @@
     "name": "Kvass",
     "description": "Fermented, cereal-based, low-alcoholic or non-alcoholic drink with malt.",
     "price": 6,
-    "category": ["drinks"],
+    "category": "drinks",
     "img": "kvass.jpg"
   },
   {
@@ -148,7 +148,7 @@
     "name": "Birch juice",
     "description": "Juice extracted from the birch tree.",
     "price": 4,
-    "category": ["drinks"],
+    "category": "drinks",
     "img": "birch_juice.jpg"
   },
   {
@@ -156,7 +156,7 @@
     "name": "Still water lemonade",
     "description": "Still water with lemon.",
     "price": 3,
-    "category": ["drinks"],
+    "category": "drinks",
     "img": "still_water_lemon.jpg"
   },
   {
@@ -164,7 +164,7 @@
     "name": "Sparkling water",
     "description": "Sparkling water.",
     "price": 3,
-    "category": ["drinks"],
+    "category": "drinks",
     "img": "sparkling_water.jpg"
   }
 ]
