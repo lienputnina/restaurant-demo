@@ -30,7 +30,9 @@ export const TextInput = ({
       name={name}
       value={value}
       aria-labelledby={`${id}-label`}
-      onChange={(event) => onChange(event.target.value)}
+      onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+        onChange(event.target.value)
+      }
     />
   </div>
 );

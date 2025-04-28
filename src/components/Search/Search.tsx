@@ -1,30 +1,57 @@
 'use client';
 
-import { FC } from 'react';
-import { TextInput } from '../TextInput/TextInput';
+import { FC, useEffect, useState } from 'react';
 
-import { setTextInputValue } from '../../state/slices/SearchInputSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
 import { MealData } from '../../state/slices/MealsSlice';
+import { useDebouncedCallback } from 'use-debounce';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+
+import { TextInput } from '../TextInput/TextInput';
+import { Meals } from '../Meals/Meals';
 
 /*
 todo:
-4. Add component for the results
 add button to clear the search input?
 */
 
 export const Search: FC = () => {
-  const dispatch = useDispatch();
-  const textInputValue = useSelector(
-    (state: RootState) => state.searchInput.textInputValue,
-  );
-  const mealData = useSelector((state: RootState) => state.meals);
+  const meals = useSelector((state: RootState) => state.meals);
 
-  const filteredMeals = mealData.meals
-    .filter((meal: MealData) =>
-      meal.category.toLowerCase().includes(textInputValue.toLowerCase()),
-    )
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
+  const handleSearch = useDebouncedCallback((userQuery: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (userQuery) {
+      params.set('query', userQuery);
+    } else {
+      params.delete('query');
+    }
+    replace(`${pathname}?${params.toString()}`);
+  }, 300);
+
+  useEffect(() => {
+    const query = searchParams.get('query') || '';
+    setSearchQuery(query);
+  }, [searchParams]);
+
+  const handleInputChange = (newValue: string) => {
+    console.log('calling handleInputChange');
+
+    setSearchQuery(newValue);
+    handleSearch(searchQuery);
+  };
+
+  const filteredMeals = meals.meals
+    .filter((meal: MealData) => {
+      meal.category.toLowerCase().includes(searchQuery.toLowerCase());
+      console.log('the search query is:', searchQuery);
+    })
     .toSorted((a: MealData, b: MealData) =>
       a.category.localeCompare(b.category),
     );
@@ -36,27 +63,10 @@ export const Search: FC = () => {
       <TextInput
         id="food-search"
         label="Browse the dishes in our menu:"
-        value={textInputValue}
-        onChange={(newValue) => {
-          dispatch(setTextInputValue(newValue));
-        }}
+        value={searchQuery}
+        onChange={handleInputChange}
       />
-      <div className="meal-results">
-        {mealData.meals.map((meal: MealData) => (
-          <ul
-            key={meal.id}
-            className="border-solid border-2 border-black rounded p-4 mb-4"
-          >
-            <img src={meal.img} width={200} height={200} />
-            <div className="meal-text mt-2">
-              <li>Name: {meal.name}</li>
-              <li>Description: {meal.description}</li>
-              <li>Price: {meal.price} eur</li>
-              <li>Category: {meal.category}</li>
-            </div>
-          </ul>
-        ))}
-      </div>
+      <Meals meals={filteredMeals} />
     </div>
   );
 };
