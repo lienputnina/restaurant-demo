@@ -13,7 +13,7 @@ export interface MealData {
 }
 
 export interface MealDataState {
-  meals: MealData[];
+  meals: MealData[]; // change the name later
 }
 
 const initialState: MealDataState = {

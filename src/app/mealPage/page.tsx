@@ -23,7 +23,7 @@ const SingleDish: NextPage = () => {
         <Title
           level={TitleLevel.ONE}
           alignment={TitleAlignment.CENTER}
-          style={{ fontSize: '50px', lineHeight: '50px', margin: '0' }}
+          style={{ fontSize: '50px', lineHeight: '50px', marginBottom: '15px' }}
         >
           {/* what is the problem? */}
           {/* {meals.meals[0].name} */}

@@ -1,22 +1,29 @@
 import { HTMLProps } from 'react';
 import './TextInput.scss';
 
+export type OnChange = (
+  event: React.ChangeEvent<HTMLInputElement>,
+  { newValue }: { newValue: string },
+) => void;
+export type OnBlur = (
+  event: React.FocusEvent<HTMLInputElement>,
+  { newValue }: { newValue: string },
+) => void;
+
 export interface TextInputProps
-  extends Omit<HTMLProps<HTMLInputElement>, 'onChange'> {
+  extends Omit<HTMLProps<HTMLInputElement>, 'onChange' | 'onBlur'> {
   id: string;
-  name?: string;
   label: string;
-  value: string;
-  onChange: (newValue: string) => void;
+  onChange?: OnChange;
+  onBlur: OnBlur;
 }
 
 export const TextInput = ({
   id,
-  name,
   label,
-  value,
+  type = 'text',
   onChange,
-  className,
+  onBlur,
   ...remainingProps
 }: TextInputProps) => (
   <div className="text-input">
@@ -26,12 +33,12 @@ export const TextInput = ({
     <input
       {...remainingProps}
       id={`${id}-input`}
-      type="text"
-      name={name}
-      value={value}
       aria-labelledby={`${id}-label`}
       onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-        onChange(event.target.value)
+        onChange?.(event, { newValue: event.target.value })
+      }
+      onBlur={(event: React.FocusEvent<HTMLInputElement>) =>
+        onBlur?.(event, { newValue: event.target.value })
       }
     />
   </div>

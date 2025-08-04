@@ -1,10 +1,12 @@
+import Link from 'next/link';
 import { FC } from 'react';
 
 import { MealData } from 'src/state/slices/MealsSlice';
 
 export const Meals: FC<{ meals: MealData[] }> = ({ meals }) => {
+  // console.log(meals); // empty array
   return (
-    <div className="meal-results">
+    <div className="meals-list">
       {meals.map((meal: MealData) => (
         <ul
           key={meal.id}
