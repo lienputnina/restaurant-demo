@@ -13,17 +13,17 @@ import { MealData, setMeals } from 'src/state/slices/MealsSlice';
 import { RootState } from 'src/state/store';
 import './page.scss';
 
-const Home: NextPage = () => {
-  const mealData: MealData[] = require('../data/mealData.json');
+const mealData: MealData[] = require('../data/mealData.json');
 
+const Home: NextPage = () => {
   const dispatch = useDispatch();
-  const meals = useAppSelector((state: RootState) => state.meals);
+  const { meals } = useAppSelector((state: RootState) => state.meals);
 
   useEffect(() => {
-    if (!meals.meals.length) {
+    if (!meals.length) {
       dispatch(setMeals(mealData));
     }
-  }, [dispatch, meals]);
+  }, []);
 
   return (
     <>
