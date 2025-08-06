@@ -3,13 +3,13 @@
 import { FC, useCallback, useEffect, useState } from 'react';
 
 import { useSelector } from 'react-redux';
-import { RootState } from '../../state/store';
-import { MealData } from '../../state/slices/MealsSlice';
+import { RootState } from '../state/store';
+import { MealData } from '../state/slices/MealsSlice';
 import { useDebouncedCallback } from 'use-debounce';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-import { OnBlur, TextInput } from '../TextInput/TextInput';
-import { Meals } from '../Meals/Meals';
+import { OnBlur, TextInput } from './TextInput/TextInput';
+import { Meals } from './Meals';
 import Link from 'next/link';
 
 export const Search: FC = () => {

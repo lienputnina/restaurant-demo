@@ -2,9 +2,9 @@
 
 import { NextPage } from 'next';
 import { Header } from 'src/components/Header/Header';
-import { Hero } from 'src/components/Hero/Hero';
-import { Footer } from 'src/components/Footer/Footer';
-import { Search } from 'src/components/Search/Search';
+import { Hero } from 'src/components/Hero';
+import { Footer } from 'src/components/Footer';
+import { Search } from 'src/components/Search';
 
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from 'src/state/hooks';

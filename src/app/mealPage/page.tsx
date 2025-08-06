@@ -5,7 +5,7 @@ import {
   TitleAlignment,
   TitleLevel,
 } from '../../components/Title/Title';
-import { Meals } from 'src/components/Meals/Meals';
+import { Meals } from 'src/components/Meals';
 
 import { NextPage } from 'next';
 import { RootState } from '../../state/store';
