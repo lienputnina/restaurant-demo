@@ -4,7 +4,6 @@ import { FC } from 'react';
 import { MealData } from 'src/state/slices/MealsSlice';
 
 export const Meals: FC<{ meals: MealData[] }> = ({ meals }) => {
-  // console.log(meals); // empty array
   return (
     <div className="meals-list">
       {meals.map((meal: MealData) => (

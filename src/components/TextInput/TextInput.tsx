@@ -1,4 +1,4 @@
-import { HTMLProps } from 'react';
+import { HTMLProps, memo } from 'react';
 import './TextInput.scss';
 
 export type OnChange = (
@@ -15,10 +15,10 @@ export interface TextInputProps
   id: string;
   label: string;
   onChange?: OnChange;
-  onBlur: OnBlur;
+  onBlur?: OnBlur;
 }
 
-export const TextInput = ({
+const TextInputUnmemoized = ({
   id,
   label,
   type = 'text',
@@ -43,3 +43,5 @@ export const TextInput = ({
     />
   </div>
 );
+
+export const TextInput = memo(TextInputUnmemoized);
