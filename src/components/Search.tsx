@@ -51,6 +51,10 @@ export const Search: FC = () => {
     setFilteredMeals(filteredResults);
   }, [inputValue, meals]);
 
+  useEffect(() => {
+    setInputValue(searchParams.get('query') || '');
+  }, [searchParams.get('query') || '']);
+
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       setInputValue(event.target.value);
