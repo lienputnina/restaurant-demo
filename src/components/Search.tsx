@@ -11,14 +11,13 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import { TextInput } from './TextInput/TextInput';
 import { Meals } from './Meals';
-import Link from 'next/link';
 
 export const Search: FC = () => {
   const { meals } = useSelector((state: RootState) => state.meals);
 
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const { replace } = useRouter();
+  const { push } = useRouter();
 
   const [inputValue, setInputValue] = useState(
     () => searchParams.get('query') || '',
@@ -35,7 +34,7 @@ export const Search: FC = () => {
     } else {
       params.delete('query');
     }
-    replace(`${pathname}?${params.toString()}`, { scroll: false });
+    push(`${pathname}?${params.toString()}`, { scroll: false });
   }, 300);
 
   useEffect(() => {
